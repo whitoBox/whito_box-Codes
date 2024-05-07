@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>//전역 변수에 대한 코드
 int add();
 int Ga;
 int Gb;
