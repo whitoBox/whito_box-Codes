@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>//매개변수의 이용에 대한 코드
 
 int fact(int n);
 
