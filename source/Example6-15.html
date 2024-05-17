@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>using if-else to grade grades</h3>
+  <hr>
+  <script>
+    let grade;
+    let score = parseInt(prompt("나천제 님의 점수를 입력해주세요: ",0));
+
+    if(score>=90) grade = "A";
+    else if(score>=80) grade = "B";
+    else if(score>=70) grade = "C";
+    else if(score>=60) grade = "D";
+    else grade = "F";
+    //document.write(score+"는 : "+grade+" 입니다.");
+    document.write(`당신의 점수${score}는 ${grade}입니다 ^ㅅ^`)
+  </script>
+</body>
+</html>
