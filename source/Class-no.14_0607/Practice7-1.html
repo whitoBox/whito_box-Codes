@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>난수 10 생성</h3>
+  <hr>
+  <script>
+    let n=[];
+    for(let i=0;i<10;i++){
+      let x = Math.random()*100+1;
+      n[i]=Math.floor(x);
+      document.write(n[i]+" ");
+    }  
+    n.sort();
+    document.write("<br><hr>biggest num:"+n[9]+"<br><hr>");
+    for(let i=0;i<10;i++){
+      document.write(n[i]+" ");
+    }
+  </script>
+</body>
+</html>
