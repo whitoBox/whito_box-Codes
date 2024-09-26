@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function show1(button){
+        let getthing = button.nextElementSibling.querySelector('span');
+        let styletemp = window.getComputedStyle(getthing);
+        let v = styletemp.getPropertyValue("visibility");
+        if(v === "hidden"){
+            button.innerHTML = '답닫기';
+            getthing.style.visibility="visible";
+        }
+        else{
+            button.innerHTML = '답보기';
+            getthing.style.visibility="hidden";
+            
+        }
+    }
+</script>
+<style>
+    div{
+        visibility: hidden;
+    }
+</style>
+<body>
+    <p>Q. 겨울아 겨울아 세상에서 누가 제일 예쁘니?</p>
+    <button onclick="show1(this)" id="btn1">답보기</button> 
+    <div style="padding-top: 10px;"><span name="q2">백설공주</span></div>
+
+    <p>Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+    <button onclick="show1(this)" id="btn2">답보기</button> 
+    <div style="padding-top: 10px;"><span name="q1">둘다</span></div>
+</body>
+</html>
