@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li:first-child{
+        background-color: lightcoral;
+    }
+    .item:hover{
+        background-color: lightgreen;
+    }
+    li:first-child::first-letter{
+        color: red;
+        font-size: 200%;
+    }
+    .item::after{/*after 뒤에*/
+        content:" -중요함!";
+        color:magenta;
+    }
+</style>
+<body>
+    <ul>
+        <li>목록#1</li>
+        <li>목록#2</li>
+        <li class="item">목록#3</li>
+    </ul>
+</body>
+</html>
