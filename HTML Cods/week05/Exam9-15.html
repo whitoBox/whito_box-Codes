@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    let files = 
+    ["media/apple.png",
+    "media/banana.png",
+    "media/beach2.png",
+    "media/Chrysanthemum.png",
+    "media/Hydrangeas.png",
+    "media/Jellyfish.png",
+    "media/Koala.png",
+    "media/Tulips.png"];
+let imgs = new Array();
+for(let i=0;i<files.length;i++){
+    imgs[i] = new Image();
+    imgs[i].src = files[i];
+}
+
+let next = 1;
+function change(img){
+    img.src = imgs[next].src;
+    next++;
+    next %= imgs.length;
+}
+</script>
+</head>
+<body>
+    <h3>new imgae()로 이미지 로딩</h3>
+    <hr>
+    이미지를 클릭하면 다음 이미지를 보여줍니다<p>
+        <img style="border:20px ridge wheat"
+        src="media/Penguins.png" alt="." width="200" height="200"
+        onclick="change(this)">
+    </p>
+</body>
+</html>
