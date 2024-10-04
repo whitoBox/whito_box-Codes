@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let prev = null;
+    window.onclick = function(e){
+        if(e.target.tagName.toLowerCase() != "li")
+            return;
+        e.target.style.fontSize = "1.5em";
+        if(prev != null)
+            prev.style.fontSize = "1em";
+        prev = e.target;
+    }
+</script>
+<body>
+    <h3>아이템을 클릭하면 1.5배 크기로</h3>
+    <hr>
+    여름방학때 하고 싶은 것들
+    <ul>
+        <li>자전거로 대한민국 일주</li>
+        <li>책 100권 읽기</li>
+        <li>철인 3종 경기 준비</li>
+        <li>자바스크립트 정복?</li>
+    </ul>
+</body>
+</html>

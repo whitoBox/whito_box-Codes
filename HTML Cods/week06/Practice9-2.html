@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function printImage(){
+        const selfood = document.querySelector("input[name='food']:checked");
+        if(selfood){
+            document.getElementById("img").src = selfood.value;
+        }
+    }
+</script>
+<body onload="printImage()">
+    <h3>누르면 사진 나옴</h3>
+    <hr>
+    <form>
+        <input type="radio" name="food" value="media/banana.png" onclick="printImage()">바나나
+        <input type="radio" name="food" value="media/mango.png" onclick="printImage()">망고
+        <input type="radio" name="food" value="media/apple.png" onclick="printImage()" checked>사과
+    </form>
+    <img id="img" src="" width="200px" height="200px" alt="">
+</body>
+</html>

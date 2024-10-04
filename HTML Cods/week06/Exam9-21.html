@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{width: 50px; height: 50px; border:1px solid orchid}
+</style>
+<script>
+    let tds;
+    let prevI=0,I=0;
+    window.onload = function(){
+        tds = document.getElementsByTagName("td");
+        tds[I].style.backgroundColor = "orchid";
+    }
+    window.onkeydown = function(e){
+        switch(e.key){
+            case "ArrowDown":
+                if(I/3>=2)return;
+                I +=3;
+                break;
+            case "ArrowUp":
+                if(I/3<1)return;
+                I -=3;
+                break;
+            case "ArrowLeft":
+                if(I%3==0)return;
+                I --;
+                break;
+            case "ArrowRight":
+                if(I%3==2)return;
+                I ++;
+                break;
+        }
+    tds[I].style.backgroundColor="orchid";
+    tds[prevI].style.backgroundColor="white";
+    prevI = I;
+    }
+</script>
+<body>
+    <h3>그리드 이동동</h3>
+    <hr>
+    <table>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+</body>
+</html>
