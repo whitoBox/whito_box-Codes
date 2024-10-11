@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded',() => {
+        const divA = document.querySelector('#first')
+        const divB = document.querySelector('#second')
+        const h1 = document.createElement('h1')
+        h1.textContent = '이동하는 h1태그'
+        
+        const toFirst = () =>{
+            divA.appendChild(h1)
+            setTimeout(toSecond,2000)
+        }
+        const toSecond = () =>{
+            divB.appendChild(h1)
+            setTimeout(toFirst,2000)
+        }
+        toFirst()
+    })
+</script>
+<body>
+    <div id="first">
+        <h1>첫 번째 div 태그 내부</h1>
+    </div>
+    <hr>
+    <div id="second">
+        <h1>두번째 div 태그 내부</h1>
+    </div>
+</body>
+</html>
