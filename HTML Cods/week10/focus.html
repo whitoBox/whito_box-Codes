@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type="text"]{
+        width:200px;
+        font-size: 14px;
+    }
+    input[type="submit"]{
+        width: 100px;
+        font-size: 14px;
+    }
+</style>
+<body> 
+    <script>
+        function checkForm(frm){
+            if(frm.name.value.length == 0){
+                alert("이름을 입력하세요");
+                frm.name.focus();
+                return false;
+            }
+            if(frm.phone.value.length == 0){
+                alert("전화번호를 입력하세요");
+                frm.phone.focus();
+                return false;
+            }
+            if(frm.email.value.length == 0){
+                alert("이메일을 입력하세요");
+                frm.email.focus();
+                return false;
+            }
+            return false;
+        }
+    </script>
+    <form name="frm" method="post" action="#" onsubmit="return checkForm(this)">
+        <table border="0">
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="name" title="이름은 필수항목 입니다."></td>
+            </tr>
+            <tr>
+                <td>전화전호</td>
+                <td><input type="text" name="phone" placeholder="010-0000-0000"></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td><input type="text" name="email" title="@ 반드시 필요"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="text-align: right;"><input type="submit" value="전송"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var txts = document.querySelectorAll('input[type="text"]');
+        for(let i=0;i<txts.length;i++){
+            txts[i].onfocus= function() {
+                this.style.backgroundColor = 'yellow';
+            }
+            txts[i].onblur= function() {
+                this.style.backgroundColor = '';
+            }
+
+        }
+    </script>
+</body>
+</html>
