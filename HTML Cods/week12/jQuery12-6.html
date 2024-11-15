@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            let arr1 = ["서울", "대전", "부산", "전주"];
+            let arr2 = ["한국", "미국", "일본", "중국"];
+            let obj = {
+            "name": "정부장",
+            "area": "서울"
+            }
+            let idxNum = $.inArray("부산", arr1);
+            document.write(idxNum+"<br>");
+            let okArray1 = $.isArray(arr1);
+            let okArray2 = $.isArray(obj);
+            document.write(okArray1+"<br>");
+            document.write(okArray2+"<br>");
+            let arr3 = $.merge(arr2,arr1);
+            arr3.forEach((list, index) => {
+                document.write(list+" ");
+            });
+            document.write("<br>");
+
+            Object.keys(obj).forEach((e)=>{
+                document.write(`${e} : ${obj[e]} `)
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

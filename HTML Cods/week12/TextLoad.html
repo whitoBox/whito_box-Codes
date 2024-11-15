@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="jquery.js"></script>
+    <script>
+        function openTextFile(){
+            let input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain";
+            input.onchange = function(event){
+                let file = event.target.files[0];
+                let reader = new FileReader();
+                reader.onload = function(){
+                    output.innerText = reader.result;
+                };
+                reader.readAsText(file,"utf8");
+            };
+            input.click();
+        }
+    </script>
+    <script>
+        $(function(){
+            let baseFontSize = 14;
+            $(".zoomBtnZone button").on("click",zoomInOut);
+            function zoomInOut(){
+                if($(this).hasClass("zoomOutBtn")){
+                    if(baseFontSize<=8) return false;
+                    baseFontSize--;
+                }else if($(this).hasClass("zoomInBtn")){
+                    if(baseFontSize>=30) return false;
+                    baseFontSize++;
+                }else {
+                    baseFontSize = 14;
+                }
+                $(".fontSize").text(baseFontSize + "px");
+                $("#output").css({fontSize:baseFontSize + "px"});
+            }
+        });
+    </script>
+</head>
+<body>
+    <button onclick="openTextFile()">Open</button><br><br>
+    <p class="zoomBtnZone">
+        <button class="zoomOutBtn">-</button>
+        <button class="originBtn">100%</button>
+        <button class="zoomInBtn">+</button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="output"></div>
+    ...
+</body>
+</html>
