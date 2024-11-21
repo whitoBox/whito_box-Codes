@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script>
+        function openTextFile() {
+            let input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain";
+            input.onchange = function(event) {
+                let file = event.target.files[0];
+                let reader = new FileReader();
+                reader.onload = function() {
+                    document.getElementById("output").innerText = reader.result;
+                };
+                reader.readAsText(file, "utf8");
+            };
+            input.click();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let baseFontSize = 14;
+
+            // 버튼들 가져오기
+            const zoomOutBtn = document.querySelector(".zoomOutBtn");
+            const originBtn = document.querySelector(".originBtn");
+            const zoomInBtn = document.querySelector(".zoomInBtn");
+            const fontSizeDisplay = document.querySelector(".fontSize");
+            const output = document.getElementById("output");
+
+            // 폰트 크기 조정 함수
+            function zoomInOut(event) {
+                const button = event.target;
+                if (button.classList.contains("zoomOutBtn")) {
+                    if (baseFontSize <= 8) return false;
+                    baseFontSize--;
+                } else if (button.classList.contains("zoomInBtn")) {
+                    if (baseFontSize >= 30) return false;
+                    baseFontSize++;
+                } else {
+                    baseFontSize = 14;
+                }
+                fontSizeDisplay.textContent = baseFontSize + "px";
+                output.style.fontSize = baseFontSize + "px";
+            }
+
+            // 이벤트 리스너 추가
+            zoomOutBtn.addEventListener("click", zoomInOut);
+            originBtn.addEventListener("click", zoomInOut);
+            zoomInBtn.addEventListener("click", zoomInOut);
+        });
+    </script>
+</head>
+<body>
+    <button onclick="openTextFile()">Open</button><br><br>
+    <p class="zoomBtnZone">
+        <button class="zoomOutBtn">-</button>
+        <button class="originBtn">100%</button>
+        <button class="zoomInBtn">+</button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="output"></div>
+</body>
+</html>
