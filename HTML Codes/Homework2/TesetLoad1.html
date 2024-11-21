@@ -33,10 +33,10 @@
                 const button = event.target;
                 if (button.classList.contains("zoomOutBtn")) {
                     if (baseFontSize <= 8) return false;
-                    baseFontSize--;
+                    baseFontSize-=2;
                 } else if (button.classList.contains("zoomInBtn")) {
                     if (baseFontSize >= 30) return false;
-                    baseFontSize++;
+                    baseFontSize+=2;
                 } else {
                     baseFontSize = 14;
                 }
