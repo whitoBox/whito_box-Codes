@@ -6,7 +6,19 @@
     <title>Document</title>
 </head>
 <script>
-    
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".btn").addEventListener("click", function () {
+        var show = document.querySelectorAll(".word");
+        show.forEach(function (wordElement) { 
+            if (getComputedStyle(wordElement).visibility === "visible") {
+                wordElement.style.visibility = "hidden";
+            } else {
+                wordElement.style.visibility = "visible";
+            }
+        });
+    });
+});
+
 </script>
 <style>
     span{
@@ -19,9 +31,9 @@
     <hr>
     <table>
         <ul>
-            <li>I (<span>love</span>) you</li>
-            <li>CSS is Cascading (<span>style</span>) sheet.</li>
-            <li>응답하라 (<span>1988</span>)</li>
+            <li>I (<span class="word">love</span>) you</li>
+            <li>CSS is Cascading (<span class="word">style</span>) sheet.</li>
+            <li>응답하라 (<span class="word">1988</span>)</li>
         </ul>
     </table>
 </body>
