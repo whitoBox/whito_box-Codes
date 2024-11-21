@@ -8,15 +8,15 @@
 </head>
 <script>
     $(function( ){
-        $("span").on("click",function(){
-            if($("span").css("visibility")=="hidden"){
-                $("span").css("visibility", "visible");
+        $(".btn").click(function(){
+            if ($(".word").css("visibility") === "visible") {
+                $(".word").css({"visibility":"hidden"});
+            } else {
+                $(".word").css({"visibility":"visible"});
             }
-            else{
-                $("span").css("visibility", "hidden");
-            }
-        });
-    });ㄴ
+
+        })
+    });
 </script>
 <style>
     span{
@@ -29,9 +29,9 @@
     <hr>
     <table>
         <ul>
-            <li>I (<span>love</span>) you</li>
-            <li>CSS is Cascading (<span>style</span>) sheet.</li>
-            <li>응답하라 (<span>1988</span>)</li>
+            <li>I (<span class="word">love</span>) you</li>
+            <li>CSS is Cascading (<span class="word">style</span>) sheet.</li>
+            <li>응답하라 (<span class="word">1988</span>)</li>
         </ul>
     </table>
 </body>

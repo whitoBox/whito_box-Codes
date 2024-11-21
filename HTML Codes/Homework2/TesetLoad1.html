@@ -23,14 +23,12 @@
         document.addEventListener("DOMContentLoaded", function() {
             let baseFontSize = 14;
 
-            // 버튼들 가져오기
             const zoomOutBtn = document.querySelector(".zoomOutBtn");
             const originBtn = document.querySelector(".originBtn");
             const zoomInBtn = document.querySelector(".zoomInBtn");
             const fontSizeDisplay = document.querySelector(".fontSize");
             const output = document.getElementById("output");
 
-            // 폰트 크기 조정 함수
             function zoomInOut(event) {
                 const button = event.target;
                 if (button.classList.contains("zoomOutBtn")) {
@@ -46,7 +44,6 @@
                 output.style.fontSize = baseFontSize + "px";
             }
 
-            // 이벤트 리스너 추가
             zoomOutBtn.addEventListener("click", zoomInOut);
             originBtn.addEventListener("click", zoomInOut);
             zoomInBtn.addEventListener("click", zoomInOut);
