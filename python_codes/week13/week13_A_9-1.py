@@ -1,4 +1,4 @@
-# week13_A_8_1.py
+# week13_A_9_1.py
 # id:202444029
 # name: 김요한
 #시험 준비 공부
@@ -8,15 +8,16 @@ from datetime import datetime as dt
 dtFormat = "%Y-%m-%d %H:%M:%S"
 
 #mypath이거 노트북에서 변경
-mypath = "D:\\Programming School\\coadings\\python_codes\\week13"
-myfile = "list.txt"
+mypath = "D:\\school coadings\\whito_box-Codes\\python_codes\\week13"
+myfile = "room.txt"
 fullfile = os.path.join(mypath, myfile)
+
 
 def diff_seconds(timein,timeout):
     if not timeout:
         timeout = dt.now()
     return (timeout - timein).total_seconds()
-    
+
 if __name__ == "__main__":
     if not os.path.isdir(mypath):
         os.mkdir(mypath)
@@ -27,8 +28,6 @@ if __name__ == "__main__":
     if os.path.isdir(mypath):
         print("복구한 정보입니다.")
         with open(fullfile, 'r') as F:
-            print(F.read())
-            F.seek(0)
             prevdata = F.readlines()
             for pdatas in prevdata:
                 datasep = pdatas.strip().split('|')
@@ -39,7 +38,8 @@ if __name__ == "__main__":
                 else:
                     dictconv['endTime'] = None
                 datas.append(dictconv)
-    
+                print(pdatas.strip())
+
     while True:
         data = {}
         data['room'] = input("강의호수:").strip()

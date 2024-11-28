@@ -7,8 +7,8 @@ from datetime import datetime as dt
 
 dtFormat = "%Y-%m-%d %H:%M:%S"
 
-mypath = "D:\Programming School\coadings\python_codes\week13"
-myfile = "lsit.txt"
+mypath = "D:\\school coadings\\whito_box-Codes\\python_codes\\week13"
+myfile = "room.txt"
 fullfile = os.path.join(mypath, myfile)
 
 def diff_seconds(timein,timeout):
