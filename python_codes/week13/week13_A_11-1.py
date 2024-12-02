@@ -9,7 +9,7 @@ from datetime import datetime as dt
 dtFormat = "%Y-%m-%d %H:%M:%S"
 
 #mypath이거 노트북에서 변경
-mypath = "D:\\school coadings\\whito_box-Codes\\python_codes\\week13"
+mypath = "D:\\Programming School\\coadings\\python_codes\\week13"
 myfile = "room.txt"
 fullfile = os.path.join(mypath, myfile)
 
@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     datas = []
     room = Room.car1()
-    if os.path.isfile(myfile):
+    if os.path.isfile(fullfile):
         print("복구한 정보입니다.")
         with open(fullfile, 'r') as F:
             prevdata = F.readlines()
