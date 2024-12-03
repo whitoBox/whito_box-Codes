@@ -44,7 +44,7 @@ if __name__ == "__main__":
             if len(file_ext) == 2 and file_ext[-1] == ".txt":
                 number = file_ext[0].strip()
                 room = Room(number)
-                rooms.append(room)
+                rooms.append(room)x``
                 #rooms[number] = []
                 
                 with open(member_fullname, 'r', encoding="utf-8")as f:
