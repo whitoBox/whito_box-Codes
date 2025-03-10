@@ -1,0 +1,7 @@
+D:\Programming School\coadings\C# Codes\FirstApp\FirstSln\bin\Debug\FirstSln.exe.config
+D:\Programming School\coadings\C# Codes\FirstApp\FirstSln\bin\Debug\FirstSln.exe
+D:\Programming School\coadings\C# Codes\FirstApp\FirstSln\bin\Debug\FirstSln.pdb
+D:\Programming School\coadings\C# Codes\FirstApp\FirstSln\obj\Debug\FirstSln.csproj.AssemblyReference.cache
+D:\Programming School\coadings\C# Codes\FirstApp\FirstSln\obj\Debug\FirstSln.csproj.CoreCompileInputs.cache
+D:\Programming School\coadings\C# Codes\FirstApp\FirstSln\obj\Debug\FirstSln.exe
+D:\Programming School\coadings\C# Codes\FirstApp\FirstSln\obj\Debug\FirstSln.pdb

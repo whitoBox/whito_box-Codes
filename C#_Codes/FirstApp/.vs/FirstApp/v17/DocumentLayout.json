@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{71B02F5A-4FCE-48B6-BC1F-C7B53F8E9C06}|FirstSln\\FirstApp.csproj|d:\\programming school\\coadings\\c#_codes\\firstapp\\firstsln\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71B02F5A-4FCE-48B6-BC1F-C7B53F8E9C06}|FirstSln\\FirstApp.csproj|solutionrelative:firstsln\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E8871F-E0C5-4302-9042-A2F88E3A6106}|FIrstForm\\FirstForm.csproj|d:\\programming school\\coadings\\c#_codes\\firstapp\\firstform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9E8871F-E0C5-4302-9042-A2F88E3A6106}|FIrstForm\\FirstForm.csproj|solutionrelative:firstform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9E8871F-E0C5-4302-9042-A2F88E3A6106}|FIrstForm\\FirstForm.csproj|D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\FIrstForm\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9E8871F-E0C5-4302-9042-A2F88E3A6106}|FIrstForm\\FirstForm.csproj|solutionrelative:FIrstForm\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\FIrstForm\\Form1.cs",
+              "RelativeDocumentMoniker": "FIrstForm\\Form1.cs",
+              "ToolTip": "D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\FIrstForm\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "FIrstForm\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T10:20:17.381Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\FirstSln\\Program.cs",
+              "RelativeDocumentMoniker": "FirstSln\\Program.cs",
+              "ToolTip": "D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\FirstSln\\Program.cs",
+              "RelativeToolTip": "FirstSln\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T04:03:09.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\FIrstForm\\Form1.cs",
+              "RelativeDocumentMoniker": "FIrstForm\\Form1.cs",
+              "ToolTip": "D:\\Programming School\\coadings\\C#_Codes\\FirstApp\\FIrstForm\\Form1.cs",
+              "RelativeToolTip": "FIrstForm\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T03:55:43.034Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

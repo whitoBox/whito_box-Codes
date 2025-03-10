@@ -1,0 +1,10 @@
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\bin\Debug\FIrstForm.exe.config
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\bin\Debug\FIrstForm.exe
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\bin\Debug\FIrstForm.pdb
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\obj\Debug\FIrstForm.csproj.AssemblyReference.cache
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\obj\Debug\FIrstForm.Properties.Resources.resources
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\obj\Debug\FIrstForm.csproj.GenerateResource.cache
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\obj\Debug\FIrstForm.csproj.CoreCompileInputs.cache
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\obj\Debug\FIrstForm.exe
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\obj\Debug\FIrstForm.pdb
+D:\Programming School\coadings\C# Codes\FirstApp\FIrstForm\obj\Debug\FIrstForm.Form1.resources
