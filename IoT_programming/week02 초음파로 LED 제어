@@ -1,0 +1,41 @@
+#define TRIG 13
+#define ECHO 12
+#define red 10
+#define green 8
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(green, OUTPUT);
+  pinMode(red, OUTPUT);
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+}
+
+void loop()
+{
+  long dur, dist;
+  
+  digitalWrite(TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+  
+  dur = pulseIn(ECHO,HIGH);
+  dist = dur / 58.2;
+  
+  if(dist>=100){
+    digitalWrite(green, HIGH);  
+    digitalWrite(red, LOW);
+  } 
+  else{
+    digitalWrite(green,LOW);
+    digitalWrite(red,HIGH);
+  }
+
+  Serial.print(dist);
+  Serial.println(" cm");
+  delay(500);
+  
+  
+}
