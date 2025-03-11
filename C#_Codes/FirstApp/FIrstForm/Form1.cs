@@ -23,5 +23,10 @@ namespace FIrstForm
             a *= 2;
             label1.Text = a.ToString();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
