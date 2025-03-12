@@ -1,0 +1,20 @@
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\bin\Debug\Week02Proj01.exe.config
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\bin\Debug\Week02Proj01.exe
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\bin\Debug\Week02Proj01.pdb
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.csproj.AssemblyReference.cache
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.Properties.Resources.resources
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.csproj.GenerateResource.cache
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.csproj.CoreCompileInputs.cache
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.exe
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.pdb
+D:\Programming School\coadings\C# Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.FromMain.resources
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\bin\Debug\Week02Proj01.exe.config
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\bin\Debug\Week02Proj01.exe
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\bin\Debug\Week02Proj01.pdb
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.csproj.AssemblyReference.cache
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.FromMain.resources
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.Properties.Resources.resources
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.csproj.GenerateResource.cache
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.csproj.CoreCompileInputs.cache
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.exe
+D:\Programming School\coadings\C#_Codes\Week02\Week02Proj01\obj\Debug\Week02Proj01.pdb
