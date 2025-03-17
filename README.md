@@ -1,2 +1,2 @@
 # 202444029_A
-all of the codes I have written in collage 
+all of the codes I'm learning in collage this semester 
