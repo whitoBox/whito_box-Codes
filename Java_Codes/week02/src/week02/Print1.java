@@ -4,12 +4,12 @@ public class Print1 {
 	public static void main(String[] args) {
 		//main 메소드 단축키 : main + ctrl+space
 		//main 메소드는 반드시 필요 => JVM이 main을 찾아서 실행 => 프로그램 실행의 시작점
-		//출력 단축키 : sysout + ctrl+space
-		//실행 단축키 : ctrl + f11
+		//출력 단축키 : sysout 작성후 + ctrl+space
+		//실행 단축키 : ctrl + F11
 		System.out.println("객체지향 프로그래밍");
 		
 		/*System.out.println("객체");
-		System.out.println("지향");*/
+		System.out.println("지향");*/ //주석 넣는 방법
 		
 		//주석 단축키 : ctrl + /(토글)
 		System.out.println("프로그래밍");

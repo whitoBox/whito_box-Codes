@@ -24,7 +24,7 @@ public class Data_type2 {
 		System.out.println("cData8 = " + cData8);
 		System.out.println("cData9 = " + cData9);
 		
-		//char 타입 변수의 유니코드 값ㅇ르 알고 싶으면 int 타입에 대입한다.
+		//char 타입 변수의 유니코드 값을 알고 싶으면 int 타입에 대입한다.
 		int  cData10 = cData7 + cData9;
 		char cData11 = (char)(cData7 + cData9);
 		System.out.println("cData10 = " + cData10);

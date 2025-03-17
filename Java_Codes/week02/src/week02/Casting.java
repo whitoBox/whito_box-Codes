@@ -3,7 +3,7 @@ package week02;
 public class Casting {
 	public static void main(String[] args) {
 		int iData = 65;           // int = 4byte
-		char cData = (char)iData; // char = 1byte
+		char cData = (char)iData; // char = 2byte
 		
 		System.out.println(cData);
 		
