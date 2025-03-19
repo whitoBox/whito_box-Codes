@@ -1,0 +1,10 @@
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\bin\Debug\Week03Proj01.exe.config
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\bin\Debug\Week03Proj01.exe
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\bin\Debug\Week03Proj01.pdb
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\obj\Debug\Week03Proj01.csproj.AssemblyReference.cache
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\obj\Debug\Week03Proj01.FormWeek03.resources
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\obj\Debug\Week03Proj01.Properties.Resources.resources
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\obj\Debug\Week03Proj01.csproj.GenerateResource.cache
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\obj\Debug\Week03Proj01.csproj.CoreCompileInputs.cache
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\obj\Debug\Week03Proj01.exe
+D:\Programming School\coadings\C# Codes\Week03Proj01\Week03Proj01\obj\Debug\Week03Proj01.pdb

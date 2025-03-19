@@ -162,7 +162,9 @@
             this.btnOutput08.Name = "btnOutput08";
             this.btnOutput08.Size = new System.Drawing.Size(100, 25);
             this.btnOutput08.TabIndex = 2;
+            this.btnOutput08.Text = "비교２";
             this.btnOutput08.UseVisualStyleBackColor = true;
+            this.btnOutput08.Click += new System.EventHandler(this.btnOutput08_Click);
             // 
             // btnOutput07
             // 
@@ -170,7 +172,9 @@
             this.btnOutput07.Name = "btnOutput07";
             this.btnOutput07.Size = new System.Drawing.Size(100, 25);
             this.btnOutput07.TabIndex = 2;
+            this.btnOutput07.Text = "비교１";
             this.btnOutput07.UseVisualStyleBackColor = true;
+            this.btnOutput07.Click += new System.EventHandler(this.btnOutput07_Click);
             // 
             // btnOutput09
             // 
@@ -178,7 +182,9 @@
             this.btnOutput09.Name = "btnOutput09";
             this.btnOutput09.Size = new System.Drawing.Size(100, 25);
             this.btnOutput09.TabIndex = 2;
+            this.btnOutput09.Text = "최소최대";
             this.btnOutput09.UseVisualStyleBackColor = true;
+            this.btnOutput09.Click += new System.EventHandler(this.btnOutput09_Click);
             // 
             // btnOutput10
             // 
@@ -186,7 +192,9 @@
             this.btnOutput10.Name = "btnOutput10";
             this.btnOutput10.Size = new System.Drawing.Size(100, 25);
             this.btnOutput10.TabIndex = 2;
+            this.btnOutput10.Text = "총합";
             this.btnOutput10.UseVisualStyleBackColor = true;
+            this.btnOutput10.Click += new System.EventHandler(this.btnOutput10_Click);
             // 
             // btnOutput11
             // 
@@ -194,7 +202,9 @@
             this.btnOutput11.Name = "btnOutput11";
             this.btnOutput11.Size = new System.Drawing.Size(100, 25);
             this.btnOutput11.TabIndex = 2;
+            this.btnOutput11.Text = "평균";
             this.btnOutput11.UseVisualStyleBackColor = true;
+            this.btnOutput11.Click += new System.EventHandler(this.btnOutput11_Click);
             // 
             // btnOutput13
             // 
