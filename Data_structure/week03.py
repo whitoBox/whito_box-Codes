@@ -1,9 +1,8 @@
 def return_int(list1,list2):
-    #list3 = [v for v in list1 if v in list2]
-    list3 = []
-    for v in list1:
-        if v in list2:
-            list3.append(v)
+    s1 = set(list1)
+    s2 = set(list2)
+    #list3 = list(s1.intersection(s2)) #intersection는 set에서 교집합을 구해주는 매소드
+    list3 = s1 & s2
     return list3
 
 list1 = [2,43,48,62,64,28,3]
