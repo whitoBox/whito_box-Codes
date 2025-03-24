@@ -1,15 +1,12 @@
-def dups(city):
-    result = []
-    a = set()
+def return_int(list1,list2):
+    #list3 = [v for v in list1 if v in list2]
+    list3 = []
+    for v in list1:
+        if v in list2:
+            list3.append(v)
+    return list3
 
-    for v in city:
-        l1 = len(a)
-        a.add(v)
-        l2 = len(a)
-        if l1 == l2: #증복 값이 들어옹
-            result.append(v)
-    return result
-city = ['a','a','b','asf']
-#city = set(city)
-print(city)
-print(dups(city))
+list1 = [2,43,48,62,64,28,3]
+list2 = [1,28,42,70,2,10,62,31,4,14]
+
+print(return_int(list1,list2))
