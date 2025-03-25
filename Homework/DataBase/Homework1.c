@@ -14,7 +14,7 @@ void main(){
                  "===============================================\n");
     while(fscanf(inf, "%d %d %d %d",&num1, &num2, &num3, &num4)== 4){
         total = num2+ num3+ num4;
-        avr = num2+num3+num4/3;
+        avr = (num2+num3+num4)/3;
         fprintf(ouf,"%-8d\t %d\t\t\t%d   \t\t%d    \t%d \t%.1f\n",num1 ,num2, num3, num4, total, avr);
     }
     fprintf(ouf, "===============================================\n");
