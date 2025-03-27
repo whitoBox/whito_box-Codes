@@ -99,9 +99,9 @@
             this.chkSub.AutoSize = true;
             this.chkSub.Location = new System.Drawing.Point(120, 48);
             this.chkSub.Name = "chkSub";
-            this.chkSub.Size = new System.Drawing.Size(86, 16);
+            this.chkSub.Size = new System.Drawing.Size(48, 16);
             this.chkSub.TabIndex = 1;
-            this.chkSub.Text = "checkBox1";
+            this.chkSub.Text = "빼기";
             this.chkSub.UseVisualStyleBackColor = true;
             // 
             // chkMul
@@ -109,9 +109,9 @@
             this.chkMul.AutoSize = true;
             this.chkMul.Location = new System.Drawing.Point(224, 48);
             this.chkMul.Name = "chkMul";
-            this.chkMul.Size = new System.Drawing.Size(86, 16);
+            this.chkMul.Size = new System.Drawing.Size(60, 16);
             this.chkMul.TabIndex = 1;
-            this.chkMul.Text = "checkBox1";
+            this.chkMul.Text = "곱하기";
             this.chkMul.UseVisualStyleBackColor = true;
             // 
             // chkDiv
@@ -119,9 +119,9 @@
             this.chkDiv.AutoSize = true;
             this.chkDiv.Location = new System.Drawing.Point(330, 48);
             this.chkDiv.Name = "chkDiv";
-            this.chkDiv.Size = new System.Drawing.Size(86, 16);
+            this.chkDiv.Size = new System.Drawing.Size(60, 16);
             this.chkDiv.TabIndex = 1;
-            this.chkDiv.Text = "checkBox1";
+            this.chkDiv.Text = "나누기";
             this.chkDiv.UseVisualStyleBackColor = true;
             // 
             // chkOption
@@ -129,10 +129,11 @@
             this.chkOption.AutoSize = true;
             this.chkOption.Location = new System.Drawing.Point(436, 48);
             this.chkOption.Name = "chkOption";
-            this.chkOption.Size = new System.Drawing.Size(86, 16);
+            this.chkOption.Size = new System.Drawing.Size(50, 16);
             this.chkOption.TabIndex = 1;
-            this.chkOption.Text = "checkBox1";
+            this.chkOption.Text = "ENG";
             this.chkOption.UseVisualStyleBackColor = true;
+            this.chkOption.CheckedChanged += new System.EventHandler(this.chkOption_CheckedChanged);
             // 
             // chkAdd
             // 
@@ -227,6 +228,7 @@
             this.btnProcess03.TabIndex = 3;
             this.btnProcess03.Text = "연산3";
             this.btnProcess03.UseVisualStyleBackColor = true;
+            this.btnProcess03.Click += new System.EventHandler(this.btnProcess03_Click);
             // 
             // btnProcess04
             // 
@@ -236,6 +238,7 @@
             this.btnProcess04.TabIndex = 3;
             this.btnProcess04.Text = "연산4";
             this.btnProcess04.UseVisualStyleBackColor = true;
+            this.btnProcess04.Click += new System.EventHandler(this.btnProcess04_Click);
             // 
             // btnProcess05
             // 
@@ -252,8 +255,9 @@
             this.btnProcess06.Name = "btnProcess06";
             this.btnProcess06.Size = new System.Drawing.Size(85, 34);
             this.btnProcess06.TabIndex = 3;
-            this.btnProcess06.Text = "button1";
+            this.btnProcess06.Text = "얼마 1";
             this.btnProcess06.UseVisualStyleBackColor = true;
+            this.btnProcess06.Click += new System.EventHandler(this.btnProcess06_Click);
             // 
             // btnProcess07
             // 
@@ -261,8 +265,9 @@
             this.btnProcess07.Name = "btnProcess07";
             this.btnProcess07.Size = new System.Drawing.Size(86, 34);
             this.btnProcess07.TabIndex = 3;
-            this.btnProcess07.Text = "button1";
+            this.btnProcess07.Text = "얼마 2";
             this.btnProcess07.UseVisualStyleBackColor = true;
+            this.btnProcess07.Click += new System.EventHandler(this.btnProcess07_Click);
             // 
             // btnProcess08
             // 
@@ -270,8 +275,9 @@
             this.btnProcess08.Name = "btnProcess08";
             this.btnProcess08.Size = new System.Drawing.Size(83, 34);
             this.btnProcess08.TabIndex = 3;
-            this.btnProcess08.Text = "button1";
+            this.btnProcess08.Text = "얼마 3";
             this.btnProcess08.UseVisualStyleBackColor = true;
+            this.btnProcess08.Click += new System.EventHandler(this.btnProcess08_Click);
             // 
             // btnProcess09
             // 
@@ -308,9 +314,9 @@
             this.chkIce.AutoSize = true;
             this.chkIce.Location = new System.Drawing.Point(224, 211);
             this.chkIce.Name = "chkIce";
-            this.chkIce.Size = new System.Drawing.Size(86, 16);
+            this.chkIce.Size = new System.Drawing.Size(48, 16);
             this.chkIce.TabIndex = 1;
-            this.chkIce.Text = "checkBox1";
+            this.chkIce.Text = "얼음";
             this.chkIce.UseVisualStyleBackColor = true;
             // 
             // lblResult

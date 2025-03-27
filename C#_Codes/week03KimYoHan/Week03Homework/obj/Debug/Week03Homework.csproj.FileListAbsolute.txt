@@ -1,0 +1,10 @@
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\bin\Debug\Week03Homework.exe.config
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\bin\Debug\Week03Homework.exe
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\bin\Debug\Week03Homework.pdb
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\obj\Debug\Week03Homework.csproj.AssemblyReference.cache
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\obj\Debug\Week03Homework.Form1.resources
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\obj\Debug\Week03Homework.Properties.Resources.resources
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\obj\Debug\Week03Homework.csproj.GenerateResource.cache
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\obj\Debug\Week03Homework.csproj.CoreCompileInputs.cache
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\obj\Debug\Week03Homework.exe
+D:\Programming School\coadings\C#_Codes\week03KimYoHan\Week03Homework\obj\Debug\Week03Homework.pdb
