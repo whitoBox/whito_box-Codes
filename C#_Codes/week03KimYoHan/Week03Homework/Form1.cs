@@ -12,48 +12,150 @@ namespace Week03Homework
 {
     public partial class Form1 : Form
     {
-        //2.연산자 눌린후 숫자를 누르면 또 새로 나와야한다.
-        //'='누르면 또 새로 값 보여줘야함
-        char currentOperand = ' ';
+        string currentOperand = "";
+        string lblnumbersdata = "0";
+        int opr1 = 0;
+        int opr2 = 0;
+        int result=0;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void btnNumber_Click(object sender, EventArgs e)//이름 바꾼후 ctrl + . or 왼쪽 전구 클릭
+        private void btnNumber_Click(object sender, EventArgs e)// 0~9 숫자 버튼
         {
             //sender가 호출한 요소다
             Button target = (Button)sender;
-            if (lblNumbers.Text == "0")
+
+            if (string.IsNullOrEmpty(lblExpression.Text) 
+                || lblExpression.Text == "0"
+                || result != 0)
             {
-                lblNumbers.Text = target.Text;
+                lblExpression.Text = target.Text;
+                lblnumbersdata = target.Text;
             }
+            else if (lblExpression.Text == "0" && target.Text == "0") return;
             else
-                lblNumbers.Text += target.Text;
+            {
+                lblExpression.Text += target.Text;
+                lblnumbersdata += target.Text;
+            }
         }
 
-        private void btnOperand_Click(object sender, EventArgs e)//이거 "연산" 영어로 바꾸기
+        private void btnOperand_Click(object sender, EventArgs e)
         {
-            if (int.Parse(lblNumbers.Text) < 1) return;
+            if (lblnumbersdata == "0") return;
+            if (lblnumbersdata[lblnumbersdata.Length - 1] == '+') return;
+            if (lblnumbersdata[lblnumbersdata.Length - 1] == '-') return;
+            if (lblnumbersdata[lblnumbersdata.Length - 1] == '*') return;
+            if (lblnumbersdata[lblnumbersdata.Length - 1] == '/') return;
+
             Button target = (Button)sender;
-            var opr1 = 0;
-            opr1 = int.Parse(lblNumbers.Text);
+            //opr1 = 0;
+            //opr2 = 0;
+            opr2 = int.Parse(lblnumbersdata);
 
             switch (target.Text)
             {
-                case "+": {lblNumbers.Text += " + "; currentOperand = '+'; } break;
-                case "-": {lblNumbers.Text += " - "; currentOperand = '-';} break;
-                case "*": {lblNumbers.Text += " * "; currentOperand = '*';} break;
-                case "/": {lblNumbers.Text += " / "; currentOperand = '/';} break;
-            }                                        
+                case "+": { opr1 = opr1 + opr2; } break;
+                case "-": { if (opr1 == 0)
+                        {
+                            opr1 = opr2;
+                        }
+                        else {
+                            opr1 -= opr2;
+                        }
+                    }break;
+                case "*": {
+                        if (opr1 == 0)
+                        {
+                            opr1 = opr2;
+                        }
+                        else
+                        {
+                            opr1 *= opr2;
+                        }
+                    } break;
+                case "/":
+                    {
+                        if (opr1 == 0)
+                        {
+                            opr1 = opr2;
+                        }
+                        else
+                        {
+                            opr1 /= opr2;
+                        }
+                    } break;
+            }
+            lblExpression.Text += " " + target.Text + " ";
+            currentOperand = target.Text;
+            lblnumbersdata = "0";
             
         }
 
         private void btnCal_Click(object sender, EventArgs e)
         {
-            string result;
+            if (string.IsNullOrEmpty(lblExpression.Text)) return;
+            if(lblExpression.Text.Length > 2)
+            {
+                if (lblExpression.Text[lblExpression.Text.Length - 2] == '+') return;
+                if (lblExpression.Text[lblExpression.Text.Length - 2] == '-') return;
+                if (lblExpression.Text[lblExpression.Text.Length - 2] == '*') return;
+                if (lblExpression.Text[lblExpression.Text.Length - 2] == '/') return;
+                if (opr1 == result) return;
+            }
 
 
+            opr2 = int.Parse(lblnumbersdata);
+            switch (currentOperand)
+            {
+                case "+": { opr1 = opr1 + opr2; } break;
+                case "-":
+                    {
+                        if (opr1 == 0)
+                        {
+                            opr1 = opr2;
+                        }
+                        else
+                        {
+                            opr1 -= opr2;
+                        }
+                    }
+                    break;
+                case "*":
+                    {
+                        if (opr1 == 0)
+                        {
+                            opr1 = opr2;
+                        }
+                        else
+                        {
+                            opr1 *= opr2;
+                        }
+                    }
+                    break;
+                case "/":
+                    {
+                        if (opr1 == 0)
+                        {
+                            opr1 = opr2;
+                        }
+                        else
+                        {
+                            opr1 /= opr2;
+                        }
+                    }
+                    break;
+            }
+
+            result = opr1;
+            lblExpression.Text += " = "+ result;
+            lblnumbersdata = "0";
+            lblNumbers.Text = opr1.ToString();
+            opr1 = 0;
+            opr2 = 0;
+            
         }
     }
 }
