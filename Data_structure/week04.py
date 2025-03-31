@@ -16,6 +16,16 @@ class LinkedList:
             current = current.link
         current.link = Node(data)
 
+    def serch(self,target):
+        current = self.head
+        while current.link:
+            if current.data == target:
+                return f"{target},found"
+            else:
+                current= current.link
+            current = current.link
+        return f"{target}, not found"
+
     def __str__(self):
         node = self.head
         out_text = ""
@@ -29,4 +39,6 @@ ll = LinkedList()
 ll.append(8)
 ll.append(10)
 ll.append(-9)
+print(ll.serch(100))
+print(ll.serch(10))
 print(ll)
