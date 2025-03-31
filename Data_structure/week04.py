@@ -16,7 +16,17 @@ class LinkedList:
             current = current.link
         current.link = Node(data)
 
+    def __str__(self):
+        node = self.head
+        out_text = ""
+        while node is not None:
+            out_text = out_text + str(node.data) + " -> "
+            node = node.link
+        return out_text + "Null"
+
+
 ll = LinkedList()
 ll.append(8)
 ll.append(10)
 ll.append(-9)
+print(ll)
