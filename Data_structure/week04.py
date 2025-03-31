@@ -1,3 +1,5 @@
+import random
+
 class Node: #링크드 리스트에 들어갈 하나의 노드
     def __init__(self, data, link = None):
         self.data = data
@@ -20,10 +22,9 @@ class LinkedList:
         current = self.head
         while current.link:
             if current.data == target:
-                return f"{target},found"
+                return f"{target}, found"
             else:
-                current= current.link
-            current = current.link
+                current = current.link
         return f"{target}, not found"
 
     def __str__(self):
@@ -35,10 +36,18 @@ class LinkedList:
         return out_text + "Null"
 
 
+# ll = LinkedList()
+# ll.append(8)
+# ll.append(10)
+# ll.append(-9)
+# print(ll.serch(100))
+# print(ll.serch(10))
+# print(ll)
+
 ll = LinkedList()
-ll.append(8)
-ll.append(10)
-ll.append(-9)
-print(ll.serch(100))
-print(ll.serch(10))
+for _ in range(20):
+    ll.append(random.randint(1,30))
+    #print(j,end=' ')
+
 print(ll)
+print(ll.serch(10))
