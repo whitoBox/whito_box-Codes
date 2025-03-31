@@ -141,6 +141,7 @@ namespace Week03Homework
                         {
                             opr1 = opr2;
                         }
+                        else if (opr2 == 0) return;
                         else
                         {
                             opr1 /= opr2;
