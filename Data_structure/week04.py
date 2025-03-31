@@ -1,5 +1,3 @@
-import random
-
 class Node: #링크드 리스트에 들어갈 하나의 노드
     def __init__(self, data, link = None):
         self.data = data
@@ -27,6 +25,18 @@ class LinkedList:
                 current = current.link
         return f"{target}, not found"
 
+    def remove(self,target):
+        if self.head.data == target: #삭제하는 값이 첫 번째 노드인 경우
+            self.head = self.head.link
+            return
+        current = self.head
+        previous =  None
+        while current:
+            if current.data == target:
+                previous.link = current.link
+            previous = current
+            current = current.link
+
     def __str__(self):
         node = self.head
         out_text = ""
@@ -36,18 +46,13 @@ class LinkedList:
         return out_text + "Null"
 
 
-# ll = LinkedList()
-# ll.append(8)
-# ll.append(10)
-# ll.append(-9)
-# print(ll.serch(100))
-# print(ll.serch(10))
-# print(ll)
-
 ll = LinkedList()
-for _ in range(20):
-    ll.append(random.randint(1,30))
-    #print(j,end=' ')
-
-print(ll)
+ll.append(8)
+ll.append(10)
+ll.append(-9)
+print(ll.serch(100))
 print(ll.serch(10))
+print(ll)
+ll.remove(-9)
+print(ll)
+
