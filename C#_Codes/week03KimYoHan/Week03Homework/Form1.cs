@@ -14,9 +14,8 @@ namespace Week03Homework
     {
         string currentOperand = "";
         string lblnumbersdata = "0";
-        int opr1 = 0;
+        double opr1 = 0;
         int opr2 = 0;
-        int result=0;
         public Form1()
         {
             InitializeComponent();
@@ -28,8 +27,7 @@ namespace Week03Homework
             Button target = (Button)sender;
 
             if (string.IsNullOrEmpty(lblExpression.Text) 
-                || lblExpression.Text == "0"
-                || result != 0)
+                || lblExpression.Text == "0")
             {
                 lblExpression.Text = target.Text;
                 lblnumbersdata = target.Text;
@@ -103,7 +101,6 @@ namespace Week03Homework
                 if (lblExpression.Text[lblExpression.Text.Length - 2] == '-') return;
                 if (lblExpression.Text[lblExpression.Text.Length - 2] == '*') return;
                 if (lblExpression.Text[lblExpression.Text.Length - 2] == '/') return;
-                if (opr1 == result) return;
             }
 
 
@@ -141,7 +138,12 @@ namespace Week03Homework
                         {
                             opr1 = opr2;
                         }
-                        else if (opr2 == 0) return;
+                        else if (opr2 == 0)
+                        {
+                            MessageBox.Show("0으로 나눌수는 없어용");
+                            lblExpression.Text = "";
+                            return;
+                        }
                         else
                         {
                             opr1 /= opr2;
@@ -150,8 +152,8 @@ namespace Week03Homework
                     break;
             }
 
-            result = opr1;
-            lblExpression.Text += " = "+ result;
+            //lblExpression.Text += " = "+ opr1;
+            lblExpression.Text = "";
             lblnumbersdata = "0";
             lblNumbers.Text = opr1.ToString();
             opr1 = 0;
