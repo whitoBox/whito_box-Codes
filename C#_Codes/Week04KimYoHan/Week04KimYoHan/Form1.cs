@@ -27,6 +27,21 @@ namespace Week04KimYoHan
 
         private void btnRegisterDepartment_Click(object sender, EventArgs e)
         {
+            //(구현)학과코드가 비어있으면 메시지를 띄우고 포커스 이동한 후 종료한다.
+            if (string.IsNullOrEmpty(tbxDepartmentCode.Text))
+            {
+                MessageBox.Show("학과코드를 입력해주세요");
+                tbxDepartmentCode.Focus();
+                return;
+            }
+            //(구현)학과이름이 비어있으면 메시지를 띄우고 포커스 이동한 후 종료한다.
+            if (string.IsNullOrEmpty(tbxDepartmentName.Text))
+            {
+                MessageBox.Show("학과이름를 입력해주세요");
+                tbxDepartmentName.Focus();
+                return;
+            }
+
             int index = -1;
             for (int i = 0; i < departments.Length; i++)
             {
@@ -42,14 +57,15 @@ namespace Week04KimYoHan
                 {
                     if (departments[i].Code == tbxDepartmentCode.Text)
                     {
-                        MessageBox.Show("이미 같은 코드가 있어요");
+                        MessageBox.Show("동일한 코드는 사용할수 없습니다.");
+                        tbxDepartmentCode.Focus();
                         return;
                     }
                 }
             }
-            if (index == -1)
+            if (index < 0)
             {
-                MessageBox.Show("자리가 없어용"); //메시지 띄우기.
+                MessageBox.Show("100개의 학과를 초과할수는 없습니다."); //메시지 띄우기.
                 return;
             }
             Department dept = new Department();
@@ -69,6 +85,7 @@ namespace Week04KimYoHan
             if (lbxDepartment.SelectedIndex < 0)
             {
                 //메시지 띄우고
+                MessageBox.Show("삭제할 학과를 선택해주세요");
                 return;
             }
 
@@ -116,8 +133,9 @@ namespace Week04KimYoHan
 
         private void cmbProfessorDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //index값 검사해서 진행여부 결정
-
+            //index값 검사해서 진행여부 결정+
+            //(구현) 조회할 학과를 선택하라는 메세지를 띄우고 종료한다.
+            
             lbxProfessor.Items.Clear();
 
             //as  형변환 연산자.
@@ -128,7 +146,7 @@ namespace Week04KimYoHan
                 foreach (var professor in professors)
                 {
                     if (professor != null && professor.DepartmentCode == department.Code)
-                    {
+                    {        
                         lbxProfessor.Items.Add(professor);
                     }
                 }

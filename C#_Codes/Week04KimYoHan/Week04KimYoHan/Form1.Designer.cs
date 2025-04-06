@@ -60,15 +60,16 @@
             this.cmbAdvisor = new System.Windows.Forms.ComboBox();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tpgDepartment = new System.Windows.Forms.TabPage();
-            this.tpgProfessor = new System.Windows.Forms.TabPage();
-            this.tpgStudent = new System.Windows.Forms.TabPage();
+            this.lbxDepartment = new System.Windows.Forms.ListBox();
+            this.btnRemoveDepartment = new System.Windows.Forms.Button();
+            this.btnRegisterDepartment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxDepartmentCode = new System.Windows.Forms.TextBox();
             this.tbxDepartmentName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbxDepartment = new System.Windows.Forms.ListBox();
-            this.btnRegisterDepartment = new System.Windows.Forms.Button();
-            this.btnRemoveDepartment = new System.Windows.Forms.Button();
+            this.tpgProfessor = new System.Windows.Forms.TabPage();
+            this.cmbProfessorDepartment = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbxProfessor = new System.Windows.Forms.ListBox();
             this.btnRemoveProfessor = new System.Windows.Forms.Button();
             this.btnRegisterProfessor = new System.Windows.Forms.Button();
@@ -76,8 +77,7 @@
             this.tbxProfessorNumber = new System.Windows.Forms.TextBox();
             this.tbxProfessorName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbProfessorDepartment = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.tpgStudent = new System.Windows.Forms.TabPage();
             this.tabMain.SuspendLayout();
             this.tpgDepartment.SuspendLayout();
             this.tpgProfessor.SuspendLayout();
@@ -245,6 +245,7 @@
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Location = new System.Drawing.Point(113, 104);
             this.cmbDepartment.Name = "cmbDepartment";
@@ -253,6 +254,7 @@
             // 
             // cmxYear
             // 
+            this.cmxYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmxYear.FormattingEnabled = true;
             this.cmxYear.Location = new System.Drawing.Point(113, 195);
             this.cmxYear.Name = "cmxYear";
@@ -261,6 +263,7 @@
             // 
             // cmbClass
             // 
+            this.cmbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbClass.FormattingEnabled = true;
             this.cmbClass.Location = new System.Drawing.Point(349, 195);
             this.cmbClass.Name = "cmbClass";
@@ -269,6 +272,7 @@
             // 
             // cmbRegStatus
             // 
+            this.cmbRegStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRegStatus.FormattingEnabled = true;
             this.cmbRegStatus.Location = new System.Drawing.Point(113, 243);
             this.cmbRegStatus.Name = "cmbRegStatus";
@@ -329,6 +333,7 @@
             // 
             // cmbAdvisor
             // 
+            this.cmbAdvisor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAdvisor.FormattingEnabled = true;
             this.cmbAdvisor.Location = new System.Drawing.Point(113, 151);
             this.cmbAdvisor.Name = "cmbAdvisor";
@@ -366,67 +371,38 @@
             this.tpgDepartment.Text = "학과정보";
             this.tpgDepartment.UseVisualStyleBackColor = true;
             // 
-            // tpgProfessor
+            // lbxDepartment
             // 
-            this.tpgProfessor.Controls.Add(this.cmbProfessorDepartment);
-            this.tpgProfessor.Controls.Add(this.label5);
-            this.tpgProfessor.Controls.Add(this.lbxProfessor);
-            this.tpgProfessor.Controls.Add(this.btnRemoveProfessor);
-            this.tpgProfessor.Controls.Add(this.btnRegisterProfessor);
-            this.tpgProfessor.Controls.Add(this.label3);
-            this.tpgProfessor.Controls.Add(this.tbxProfessorNumber);
-            this.tpgProfessor.Controls.Add(this.tbxProfessorName);
-            this.tpgProfessor.Controls.Add(this.label4);
-            this.tpgProfessor.Location = new System.Drawing.Point(4, 34);
-            this.tpgProfessor.Name = "tpgProfessor";
-            this.tpgProfessor.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgProfessor.Size = new System.Drawing.Size(740, 463);
-            this.tpgProfessor.TabIndex = 3;
-            this.tpgProfessor.Text = "교수정보";
-            this.tpgProfessor.UseVisualStyleBackColor = true;
+            this.lbxDepartment.FormattingEnabled = true;
+            this.lbxDepartment.ItemHeight = 12;
+            this.lbxDepartment.Location = new System.Drawing.Point(13, 94);
+            this.lbxDepartment.Name = "lbxDepartment";
+            this.lbxDepartment.Size = new System.Drawing.Size(692, 268);
+            this.lbxDepartment.TabIndex = 7;
             // 
-            // tpgStudent
+            // btnRemoveDepartment
             // 
-            this.tpgStudent.Controls.Add(this.lblNumber);
-            this.tpgStudent.Controls.Add(this.lbxArray);
-            this.tpgStudent.Controls.Add(this.tbxNumber);
-            this.tpgStudent.Controls.Add(this.lbxDictionary);
-            this.tpgStudent.Controls.Add(this.tbxName);
-            this.tpgStudent.Controls.Add(this.lbxList);
-            this.tpgStudent.Controls.Add(this.tbxBirthYear);
-            this.tpgStudent.Controls.Add(this.btnRegister);
-            this.tpgStudent.Controls.Add(this.tbxBirthMonth);
-            this.tpgStudent.Controls.Add(this.btnNew);
-            this.tpgStudent.Controls.Add(this.tbxBirthDay);
-            this.tpgStudent.Controls.Add(this.cmbClass);
-            this.tpgStudent.Controls.Add(this.tbxAdress);
-            this.tpgStudent.Controls.Add(this.cmbRegStatus);
-            this.tpgStudent.Controls.Add(this.tbxContact);
-            this.tpgStudent.Controls.Add(this.cmxYear);
-            this.tpgStudent.Controls.Add(this.lblName);
-            this.tpgStudent.Controls.Add(this.cmbAdvisor);
-            this.tpgStudent.Controls.Add(this.lblBirth);
-            this.tpgStudent.Controls.Add(this.cmbDepartment);
-            this.tpgStudent.Controls.Add(this.lblBirthYear);
-            this.tpgStudent.Controls.Add(this.lblContact);
-            this.tpgStudent.Controls.Add(this.lblBirthMonth);
-            this.tpgStudent.Controls.Add(this.lblAdress);
-            this.tpgStudent.Controls.Add(this.lblBirthDay);
-            this.tpgStudent.Controls.Add(this.lblRegStatus);
-            this.tpgStudent.Controls.Add(this.lblDepartment);
-            this.tpgStudent.Controls.Add(this.lblClass);
-            this.tpgStudent.Controls.Add(this.lblAdvisor);
-            this.tpgStudent.Controls.Add(this.lblYear);
-            this.tpgStudent.Location = new System.Drawing.Point(4, 34);
-            this.tpgStudent.Name = "tpgStudent";
-            this.tpgStudent.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgStudent.Size = new System.Drawing.Size(740, 463);
-            this.tpgStudent.TabIndex = 4;
-            this.tpgStudent.Text = "학생정보";
-            this.tpgStudent.UseVisualStyleBackColor = true;
+            this.btnRemoveDepartment.Location = new System.Drawing.Point(580, 379);
+            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
+            this.btnRemoveDepartment.Size = new System.Drawing.Size(125, 64);
+            this.btnRemoveDepartment.TabIndex = 6;
+            this.btnRemoveDepartment.Text = "삭제";
+            this.btnRemoveDepartment.UseVisualStyleBackColor = true;
+            this.btnRemoveDepartment.Click += new System.EventHandler(this.btnRemoveDepartment_Click);
+            // 
+            // btnRegisterDepartment
+            // 
+            this.btnRegisterDepartment.Location = new System.Drawing.Point(193, 11);
+            this.btnRegisterDepartment.Name = "btnRegisterDepartment";
+            this.btnRegisterDepartment.Size = new System.Drawing.Size(120, 68);
+            this.btnRegisterDepartment.TabIndex = 6;
+            this.btnRegisterDepartment.Text = "등록";
+            this.btnRegisterDepartment.UseVisualStyleBackColor = true;
+            this.btnRegisterDepartment.Click += new System.EventHandler(this.btnRegisterDepartment_Click);
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(21, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 23);
@@ -451,6 +427,7 @@
             // 
             // label2
             // 
+            this.label2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(21, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
@@ -458,34 +435,43 @@
             this.label2.Text = "학과이름";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbxDepartment
+            // tpgProfessor
             // 
-            this.lbxDepartment.FormattingEnabled = true;
-            this.lbxDepartment.ItemHeight = 12;
-            this.lbxDepartment.Location = new System.Drawing.Point(13, 94);
-            this.lbxDepartment.Name = "lbxDepartment";
-            this.lbxDepartment.Size = new System.Drawing.Size(692, 268);
-            this.lbxDepartment.TabIndex = 7;
+            this.tpgProfessor.Controls.Add(this.cmbProfessorDepartment);
+            this.tpgProfessor.Controls.Add(this.label5);
+            this.tpgProfessor.Controls.Add(this.lbxProfessor);
+            this.tpgProfessor.Controls.Add(this.btnRemoveProfessor);
+            this.tpgProfessor.Controls.Add(this.btnRegisterProfessor);
+            this.tpgProfessor.Controls.Add(this.label3);
+            this.tpgProfessor.Controls.Add(this.tbxProfessorNumber);
+            this.tpgProfessor.Controls.Add(this.tbxProfessorName);
+            this.tpgProfessor.Controls.Add(this.label4);
+            this.tpgProfessor.Location = new System.Drawing.Point(4, 34);
+            this.tpgProfessor.Name = "tpgProfessor";
+            this.tpgProfessor.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgProfessor.Size = new System.Drawing.Size(740, 463);
+            this.tpgProfessor.TabIndex = 3;
+            this.tpgProfessor.Text = "교수정보";
+            this.tpgProfessor.UseVisualStyleBackColor = true;
             // 
-            // btnRegisterDepartment
+            // cmbProfessorDepartment
             // 
-            this.btnRegisterDepartment.Location = new System.Drawing.Point(193, 11);
-            this.btnRegisterDepartment.Name = "btnRegisterDepartment";
-            this.btnRegisterDepartment.Size = new System.Drawing.Size(120, 68);
-            this.btnRegisterDepartment.TabIndex = 6;
-            this.btnRegisterDepartment.Text = "등록";
-            this.btnRegisterDepartment.UseVisualStyleBackColor = true;
-            this.btnRegisterDepartment.Click += new System.EventHandler(this.btnRegisterDepartment_Click);
+            this.cmbProfessorDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProfessorDepartment.FormattingEnabled = true;
+            this.cmbProfessorDepartment.Location = new System.Drawing.Point(130, 21);
+            this.cmbProfessorDepartment.Name = "cmbProfessorDepartment";
+            this.cmbProfessorDepartment.Size = new System.Drawing.Size(381, 20);
+            this.cmbProfessorDepartment.TabIndex = 16;
+            this.cmbProfessorDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbProfessorDepartment_SelectedIndexChanged);
             // 
-            // btnRemoveDepartment
+            // label5
             // 
-            this.btnRemoveDepartment.Location = new System.Drawing.Point(580, 379);
-            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
-            this.btnRemoveDepartment.Size = new System.Drawing.Size(125, 64);
-            this.btnRemoveDepartment.TabIndex = 6;
-            this.btnRemoveDepartment.Text = "삭제";
-            this.btnRemoveDepartment.UseVisualStyleBackColor = true;
-            this.btnRemoveDepartment.Click += new System.EventHandler(this.btnRemoveDepartment_Click);
+            this.label5.Location = new System.Drawing.Point(29, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "소속학과";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbxProfessor
             // 
@@ -548,24 +534,45 @@
             this.label4.Text = "교수이름";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cmbProfessorDepartment
+            // tpgStudent
             // 
-            this.cmbProfessorDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbProfessorDepartment.FormattingEnabled = true;
-            this.cmbProfessorDepartment.Location = new System.Drawing.Point(130, 21);
-            this.cmbProfessorDepartment.Name = "cmbProfessorDepartment";
-            this.cmbProfessorDepartment.Size = new System.Drawing.Size(381, 20);
-            this.cmbProfessorDepartment.TabIndex = 16;
-            this.cmbProfessorDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbProfessorDepartment_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(29, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "소속학과";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tpgStudent.Controls.Add(this.lblNumber);
+            this.tpgStudent.Controls.Add(this.lbxArray);
+            this.tpgStudent.Controls.Add(this.tbxNumber);
+            this.tpgStudent.Controls.Add(this.lbxDictionary);
+            this.tpgStudent.Controls.Add(this.tbxName);
+            this.tpgStudent.Controls.Add(this.lbxList);
+            this.tpgStudent.Controls.Add(this.tbxBirthYear);
+            this.tpgStudent.Controls.Add(this.btnRegister);
+            this.tpgStudent.Controls.Add(this.tbxBirthMonth);
+            this.tpgStudent.Controls.Add(this.btnNew);
+            this.tpgStudent.Controls.Add(this.tbxBirthDay);
+            this.tpgStudent.Controls.Add(this.cmbClass);
+            this.tpgStudent.Controls.Add(this.tbxAdress);
+            this.tpgStudent.Controls.Add(this.cmbRegStatus);
+            this.tpgStudent.Controls.Add(this.tbxContact);
+            this.tpgStudent.Controls.Add(this.cmxYear);
+            this.tpgStudent.Controls.Add(this.lblName);
+            this.tpgStudent.Controls.Add(this.cmbAdvisor);
+            this.tpgStudent.Controls.Add(this.lblBirth);
+            this.tpgStudent.Controls.Add(this.cmbDepartment);
+            this.tpgStudent.Controls.Add(this.lblBirthYear);
+            this.tpgStudent.Controls.Add(this.lblContact);
+            this.tpgStudent.Controls.Add(this.lblBirthMonth);
+            this.tpgStudent.Controls.Add(this.lblAdress);
+            this.tpgStudent.Controls.Add(this.lblBirthDay);
+            this.tpgStudent.Controls.Add(this.lblRegStatus);
+            this.tpgStudent.Controls.Add(this.lblDepartment);
+            this.tpgStudent.Controls.Add(this.lblClass);
+            this.tpgStudent.Controls.Add(this.lblAdvisor);
+            this.tpgStudent.Controls.Add(this.lblYear);
+            this.tpgStudent.Location = new System.Drawing.Point(4, 34);
+            this.tpgStudent.Name = "tpgStudent";
+            this.tpgStudent.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgStudent.Size = new System.Drawing.Size(740, 463);
+            this.tpgStudent.TabIndex = 4;
+            this.tpgStudent.Text = "학생정보";
+            this.tpgStudent.UseVisualStyleBackColor = true;
             // 
             // FormManager
             // 
