@@ -490,6 +490,7 @@
             this.btnRemoveProfessor.TabIndex = 12;
             this.btnRemoveProfessor.Text = "삭제";
             this.btnRemoveProfessor.UseVisualStyleBackColor = true;
+            this.btnRemoveProfessor.Click += new System.EventHandler(this.btnRemoveProfessor_Click);
             // 
             // btnRegisterProfessor
             // 
@@ -499,9 +500,11 @@
             this.btnRegisterProfessor.TabIndex = 13;
             this.btnRegisterProfessor.Text = "등록";
             this.btnRegisterProfessor.UseVisualStyleBackColor = true;
+            this.btnRegisterProfessor.Click += new System.EventHandler(this.btnRegisterProfessor_Click);
             // 
             // label3
             // 
+            this.label3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(29, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
@@ -527,6 +530,7 @@
             // 
             // label4
             // 
+            this.label4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(29, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
@@ -581,7 +585,7 @@
             this.ClientSize = new System.Drawing.Size(748, 501);
             this.Controls.Add(this.tabMain);
             this.Name = "FormManager";
-            this.Text = "4";
+            this.Text = "학과정보";
             this.tabMain.ResumeLayout(false);
             this.tpgDepartment.ResumeLayout(false);
             this.tpgDepartment.PerformLayout();
