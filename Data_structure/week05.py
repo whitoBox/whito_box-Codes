@@ -23,8 +23,11 @@ class Stack:
         return f"popped: ({popped_node.data})"
 
 s1 = Stack()
-print(s1.pop())
+#print(s1.pop())
 s1.push("data_structure")
 s1.push("database")
-print(s1.pop())
-print(s1.pop())
+s1.push("thing")
+#print(s1.pop())
+#print(s1.pop())
+for i in range(2):
+    print(s1.pop())
