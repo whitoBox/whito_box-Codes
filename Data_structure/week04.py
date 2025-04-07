@@ -18,7 +18,7 @@ class LinkedList:
 
     def serch(self,target):
         current = self.head
-        while current.link:
+        while current:
             if current.data == target:
                 return f"{target}, found"
             else:
@@ -50,9 +50,10 @@ ll = LinkedList()
 ll.append(8)
 ll.append(10)
 ll.append(-9)
-print(ll.serch(100))
-print(ll.serch(10))
 print(ll)
+print(ll.serch(100))
+print(ll.serch(-9))
+ll.remove(90)
 ll.remove(-9)
 print(ll)
 
