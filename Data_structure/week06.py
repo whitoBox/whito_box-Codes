@@ -18,6 +18,7 @@ class Queue:
         else:
             self.rear.link = node
             self.rear = node
+
     def dequeue(self):
         if self.front is None:
             raise IndexError("Queue is empty")
@@ -38,6 +39,6 @@ q.enqueue("database")
 print(q.size, q.front.data,q.rear.data)
 q.dequeue()
 q.dequeue()
-print(q.size, q.front,q.rear)
+print(q.size, q.front, q.rear)
 
 
