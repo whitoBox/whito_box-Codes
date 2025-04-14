@@ -48,7 +48,7 @@
             this.lblBirthDay = new System.Windows.Forms.Label();
             this.lblClass = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.cmxYear = new System.Windows.Forms.ComboBox();
+            this.cmbYear = new System.Windows.Forms.ComboBox();
             this.cmbClass = new System.Windows.Forms.ComboBox();
             this.cmbRegStatus = new System.Windows.Forms.ComboBox();
             this.tbxContact = new System.Windows.Forms.TextBox();
@@ -78,10 +78,40 @@
             this.tbxProfessorName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tpgStudent = new System.Windows.Forms.TabPage();
+            this.tpgTestScore = new System.Windows.Forms.TabPage();
+            this.btnTestRegScore = new System.Windows.Forms.Button();
+            this.btnTestSearchStudent = new System.Windows.Forms.Button();
+            this.lblTestCourse9Title = new System.Windows.Forms.Label();
+            this.lblTestCourse6Title = new System.Windows.Forms.Label();
+            this.lblTestCourse3Title = new System.Windows.Forms.Label();
+            this.lblTestCourse8Title = new System.Windows.Forms.Label();
+            this.lblTestCourse5Title = new System.Windows.Forms.Label();
+            this.lblTestCourse2Title = new System.Windows.Forms.Label();
+            this.lblTestCourse7Title = new System.Windows.Forms.Label();
+            this.lblTestCourse4Title = new System.Windows.Forms.Label();
+            this.lblTestCourse1Title = new System.Windows.Forms.Label();
+            this.tbxTestScore9 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore6 = new System.Windows.Forms.TextBox();
+            this.lblTestNumberTitle = new System.Windows.Forms.Label();
+            this.tbxTestScore8 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore5 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore3 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore7 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore4 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore2 = new System.Windows.Forms.TextBox();
+            this.tbxTestScore1 = new System.Windows.Forms.TextBox();
+            this.tbxTestNumber = new System.Windows.Forms.TextBox();
+            this.lblTestAverage = new System.Windows.Forms.Label();
+            this.lblTestAverageTitle = new System.Windows.Forms.Label();
+            this.lblTestTotalCount = new System.Windows.Forms.Label();
+            this.lblTestTotalCountTitle = new System.Windows.Forms.Label();
+            this.lblTestName = new System.Windows.Forms.Label();
+            this.lblTestNameTitle = new System.Windows.Forms.Label();
             this.tabMain.SuspendLayout();
             this.tpgDepartment.SuspendLayout();
             this.tpgProfessor.SuspendLayout();
             this.tpgStudent.SuspendLayout();
+            this.tpgTestScore.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxNumber
@@ -251,15 +281,16 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(381, 20);
             this.cmbDepartment.TabIndex = 2;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
-            // cmxYear
+            // cmbYear
             // 
-            this.cmxYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmxYear.FormattingEnabled = true;
-            this.cmxYear.Location = new System.Drawing.Point(113, 195);
-            this.cmxYear.Name = "cmxYear";
-            this.cmxYear.Size = new System.Drawing.Size(145, 20);
-            this.cmxYear.TabIndex = 2;
+            this.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.Location = new System.Drawing.Point(113, 195);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Size = new System.Drawing.Size(145, 20);
+            this.cmbYear.TabIndex = 2;
             // 
             // cmbClass
             // 
@@ -294,6 +325,7 @@
             this.btnNew.TabIndex = 3;
             this.btnNew.Text = "신규";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnRegister
             // 
@@ -303,6 +335,7 @@
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "등록";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lbxList
             // 
@@ -321,6 +354,7 @@
             this.lbxDictionary.Name = "lbxDictionary";
             this.lbxDictionary.Size = new System.Drawing.Size(209, 124);
             this.lbxDictionary.TabIndex = 4;
+            this.lbxDictionary.SelectedIndexChanged += new System.EventHandler(this.lbxDictionary_SelectedIndexChanged);
             // 
             // lbxArray
             // 
@@ -345,6 +379,7 @@
             this.tabMain.Controls.Add(this.tpgDepartment);
             this.tabMain.Controls.Add(this.tpgProfessor);
             this.tabMain.Controls.Add(this.tpgStudent);
+            this.tabMain.Controls.Add(this.tpgTestScore);
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMain.ItemSize = new System.Drawing.Size(64, 30);
             this.tabMain.Location = new System.Drawing.Point(0, 0);
@@ -555,7 +590,7 @@
             this.tpgStudent.Controls.Add(this.tbxAdress);
             this.tpgStudent.Controls.Add(this.cmbRegStatus);
             this.tpgStudent.Controls.Add(this.tbxContact);
-            this.tpgStudent.Controls.Add(this.cmxYear);
+            this.tpgStudent.Controls.Add(this.cmbYear);
             this.tpgStudent.Controls.Add(this.lblName);
             this.tpgStudent.Controls.Add(this.cmbAdvisor);
             this.tpgStudent.Controls.Add(this.lblBirth);
@@ -578,6 +613,306 @@
             this.tpgStudent.Text = "학생정보";
             this.tpgStudent.UseVisualStyleBackColor = true;
             // 
+            // tpgTestScore
+            // 
+            this.tpgTestScore.Controls.Add(this.btnTestRegScore);
+            this.tpgTestScore.Controls.Add(this.btnTestSearchStudent);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse9Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse6Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse3Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse8Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse5Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse2Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse7Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse4Title);
+            this.tpgTestScore.Controls.Add(this.lblTestCourse1Title);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore9);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore6);
+            this.tpgTestScore.Controls.Add(this.lblTestNumberTitle);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore8);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore5);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore3);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore7);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore4);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore2);
+            this.tpgTestScore.Controls.Add(this.tbxTestScore1);
+            this.tpgTestScore.Controls.Add(this.tbxTestNumber);
+            this.tpgTestScore.Controls.Add(this.lblTestAverage);
+            this.tpgTestScore.Controls.Add(this.lblTestAverageTitle);
+            this.tpgTestScore.Controls.Add(this.lblTestTotalCount);
+            this.tpgTestScore.Controls.Add(this.lblTestTotalCountTitle);
+            this.tpgTestScore.Controls.Add(this.lblTestName);
+            this.tpgTestScore.Controls.Add(this.lblTestNameTitle);
+            this.tpgTestScore.Location = new System.Drawing.Point(4, 34);
+            this.tpgTestScore.Name = "tpgTestScore";
+            this.tpgTestScore.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgTestScore.Size = new System.Drawing.Size(740, 463);
+            this.tpgTestScore.TabIndex = 5;
+            this.tpgTestScore.Text = "성적처리(TEST)";
+            this.tpgTestScore.UseVisualStyleBackColor = true;
+            // 
+            // btnTestRegScore
+            // 
+            this.btnTestRegScore.Location = new System.Drawing.Point(288, 371);
+            this.btnTestRegScore.Name = "btnTestRegScore";
+            this.btnTestRegScore.Size = new System.Drawing.Size(66, 68);
+            this.btnTestRegScore.TabIndex = 41;
+            this.btnTestRegScore.Text = "수정 및 완료";
+            this.btnTestRegScore.UseVisualStyleBackColor = true;
+            this.btnTestRegScore.Click += new System.EventHandler(this.btnTestRegScore_Click);
+            // 
+            // btnTestSearchStudent
+            // 
+            this.btnTestSearchStudent.Location = new System.Drawing.Point(268, 23);
+            this.btnTestSearchStudent.Name = "btnTestSearchStudent";
+            this.btnTestSearchStudent.Size = new System.Drawing.Size(86, 48);
+            this.btnTestSearchStudent.TabIndex = 40;
+            this.btnTestSearchStudent.Text = "검색";
+            this.btnTestSearchStudent.UseVisualStyleBackColor = true;
+            this.btnTestSearchStudent.Click += new System.EventHandler(this.btnTestSearchStudent_Click);
+            // 
+            // lblTestCourse9Title
+            // 
+            this.lblTestCourse9Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse9Title.Location = new System.Drawing.Point(22, 402);
+            this.lblTestCourse9Title.Name = "lblTestCourse9Title";
+            this.lblTestCourse9Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse9Title.TabIndex = 15;
+            this.lblTestCourse9Title.Text = "과목 9";
+            this.lblTestCourse9Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse6Title
+            // 
+            this.lblTestCourse6Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse6Title.Location = new System.Drawing.Point(22, 285);
+            this.lblTestCourse6Title.Name = "lblTestCourse6Title";
+            this.lblTestCourse6Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse6Title.TabIndex = 16;
+            this.lblTestCourse6Title.Text = "과목 6";
+            this.lblTestCourse6Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse3Title
+            // 
+            this.lblTestCourse3Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse3Title.Location = new System.Drawing.Point(22, 168);
+            this.lblTestCourse3Title.Name = "lblTestCourse3Title";
+            this.lblTestCourse3Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse3Title.TabIndex = 17;
+            this.lblTestCourse3Title.Text = "과목 3";
+            this.lblTestCourse3Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse8Title
+            // 
+            this.lblTestCourse8Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse8Title.Location = new System.Drawing.Point(22, 363);
+            this.lblTestCourse8Title.Name = "lblTestCourse8Title";
+            this.lblTestCourse8Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse8Title.TabIndex = 18;
+            this.lblTestCourse8Title.Text = "과목 8";
+            this.lblTestCourse8Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse5Title
+            // 
+            this.lblTestCourse5Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse5Title.Location = new System.Drawing.Point(22, 246);
+            this.lblTestCourse5Title.Name = "lblTestCourse5Title";
+            this.lblTestCourse5Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse5Title.TabIndex = 19;
+            this.lblTestCourse5Title.Text = "과목 5";
+            this.lblTestCourse5Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse2Title
+            // 
+            this.lblTestCourse2Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse2Title.Location = new System.Drawing.Point(22, 129);
+            this.lblTestCourse2Title.Name = "lblTestCourse2Title";
+            this.lblTestCourse2Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse2Title.TabIndex = 20;
+            this.lblTestCourse2Title.Text = "과목 2";
+            this.lblTestCourse2Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse7Title
+            // 
+            this.lblTestCourse7Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse7Title.Location = new System.Drawing.Point(22, 324);
+            this.lblTestCourse7Title.Name = "lblTestCourse7Title";
+            this.lblTestCourse7Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse7Title.TabIndex = 21;
+            this.lblTestCourse7Title.Text = "과목 7";
+            this.lblTestCourse7Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse4Title
+            // 
+            this.lblTestCourse4Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse4Title.Location = new System.Drawing.Point(22, 207);
+            this.lblTestCourse4Title.Name = "lblTestCourse4Title";
+            this.lblTestCourse4Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse4Title.TabIndex = 22;
+            this.lblTestCourse4Title.Text = "과목 4";
+            this.lblTestCourse4Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestCourse1Title
+            // 
+            this.lblTestCourse1Title.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestCourse1Title.Location = new System.Drawing.Point(22, 90);
+            this.lblTestCourse1Title.Name = "lblTestCourse1Title";
+            this.lblTestCourse1Title.Size = new System.Drawing.Size(112, 21);
+            this.lblTestCourse1Title.TabIndex = 23;
+            this.lblTestCourse1Title.Text = "과목 1";
+            this.lblTestCourse1Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbxTestScore9
+            // 
+            this.tbxTestScore9.Location = new System.Drawing.Point(151, 403);
+            this.tbxTestScore9.Name = "tbxTestScore9";
+            this.tbxTestScore9.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore9.TabIndex = 29;
+            this.tbxTestScore9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore6
+            // 
+            this.tbxTestScore6.Location = new System.Drawing.Point(151, 286);
+            this.tbxTestScore6.Name = "tbxTestScore6";
+            this.tbxTestScore6.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore6.TabIndex = 31;
+            this.tbxTestScore6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblTestNumberTitle
+            // 
+            this.lblTestNumberTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestNumberTitle.Location = new System.Drawing.Point(21, 22);
+            this.lblTestNumberTitle.Name = "lblTestNumberTitle";
+            this.lblTestNumberTitle.Size = new System.Drawing.Size(112, 21);
+            this.lblTestNumberTitle.TabIndex = 14;
+            this.lblTestNumberTitle.Text = "학번";
+            this.lblTestNumberTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tbxTestScore8
+            // 
+            this.tbxTestScore8.Location = new System.Drawing.Point(151, 364);
+            this.tbxTestScore8.Name = "tbxTestScore8";
+            this.tbxTestScore8.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore8.TabIndex = 30;
+            this.tbxTestScore8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore5
+            // 
+            this.tbxTestScore5.Location = new System.Drawing.Point(151, 247);
+            this.tbxTestScore5.Name = "tbxTestScore5";
+            this.tbxTestScore5.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore5.TabIndex = 33;
+            this.tbxTestScore5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore3
+            // 
+            this.tbxTestScore3.Location = new System.Drawing.Point(151, 169);
+            this.tbxTestScore3.Name = "tbxTestScore3";
+            this.tbxTestScore3.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore3.TabIndex = 28;
+            this.tbxTestScore3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore7
+            // 
+            this.tbxTestScore7.Location = new System.Drawing.Point(151, 325);
+            this.tbxTestScore7.Name = "tbxTestScore7";
+            this.tbxTestScore7.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore7.TabIndex = 27;
+            this.tbxTestScore7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore4
+            // 
+            this.tbxTestScore4.Location = new System.Drawing.Point(151, 208);
+            this.tbxTestScore4.Name = "tbxTestScore4";
+            this.tbxTestScore4.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore4.TabIndex = 26;
+            this.tbxTestScore4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore2
+            // 
+            this.tbxTestScore2.Location = new System.Drawing.Point(151, 130);
+            this.tbxTestScore2.Name = "tbxTestScore2";
+            this.tbxTestScore2.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore2.TabIndex = 25;
+            this.tbxTestScore2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestScore1
+            // 
+            this.tbxTestScore1.Location = new System.Drawing.Point(151, 91);
+            this.tbxTestScore1.Name = "tbxTestScore1";
+            this.tbxTestScore1.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestScore1.TabIndex = 24;
+            this.tbxTestScore1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tbxTestNumber
+            // 
+            this.tbxTestNumber.Location = new System.Drawing.Point(151, 23);
+            this.tbxTestNumber.Name = "tbxTestNumber";
+            this.tbxTestNumber.Size = new System.Drawing.Size(100, 21);
+            this.tbxTestNumber.TabIndex = 32;
+            // 
+            // lblTestAverage
+            // 
+            this.lblTestAverage.BackColor = System.Drawing.Color.White;
+            this.lblTestAverage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTestAverage.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestAverage.Location = new System.Drawing.Point(499, 399);
+            this.lblTestAverage.Name = "lblTestAverage";
+            this.lblTestAverage.Size = new System.Drawing.Size(100, 21);
+            this.lblTestAverage.TabIndex = 39;
+            this.lblTestAverage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestAverageTitle
+            // 
+            this.lblTestAverageTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestAverageTitle.Location = new System.Drawing.Point(370, 398);
+            this.lblTestAverageTitle.Name = "lblTestAverageTitle";
+            this.lblTestAverageTitle.Size = new System.Drawing.Size(112, 21);
+            this.lblTestAverageTitle.TabIndex = 36;
+            this.lblTestAverageTitle.Text = "평균";
+            this.lblTestAverageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestTotalCount
+            // 
+            this.lblTestTotalCount.BackColor = System.Drawing.Color.White;
+            this.lblTestTotalCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTestTotalCount.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestTotalCount.Location = new System.Drawing.Point(499, 374);
+            this.lblTestTotalCount.Name = "lblTestTotalCount";
+            this.lblTestTotalCount.Size = new System.Drawing.Size(100, 21);
+            this.lblTestTotalCount.TabIndex = 34;
+            this.lblTestTotalCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestTotalCountTitle
+            // 
+            this.lblTestTotalCountTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestTotalCountTitle.Location = new System.Drawing.Point(370, 373);
+            this.lblTestTotalCountTitle.Name = "lblTestTotalCountTitle";
+            this.lblTestTotalCountTitle.Size = new System.Drawing.Size(112, 21);
+            this.lblTestTotalCountTitle.TabIndex = 35;
+            this.lblTestTotalCountTitle.Text = "총과목";
+            this.lblTestTotalCountTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestName
+            // 
+            this.lblTestName.BackColor = System.Drawing.Color.White;
+            this.lblTestName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTestName.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestName.Location = new System.Drawing.Point(150, 50);
+            this.lblTestName.Name = "lblTestName";
+            this.lblTestName.Size = new System.Drawing.Size(100, 21);
+            this.lblTestName.TabIndex = 38;
+            this.lblTestName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTestNameTitle
+            // 
+            this.lblTestNameTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblTestNameTitle.Location = new System.Drawing.Point(21, 49);
+            this.lblTestNameTitle.Name = "lblTestNameTitle";
+            this.lblTestNameTitle.Size = new System.Drawing.Size(112, 21);
+            this.lblTestNameTitle.TabIndex = 37;
+            this.lblTestNameTitle.Text = "이름";
+            this.lblTestNameTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FormManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -593,6 +928,8 @@
             this.tpgProfessor.PerformLayout();
             this.tpgStudent.ResumeLayout(false);
             this.tpgStudent.PerformLayout();
+            this.tpgTestScore.ResumeLayout(false);
+            this.tpgTestScore.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -619,7 +956,7 @@
         private System.Windows.Forms.Label lblBirthDay;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.ComboBox cmbDepartment;
-        private System.Windows.Forms.ComboBox cmxYear;
+        private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.ComboBox cmbClass;
         private System.Windows.Forms.ComboBox cmbRegStatus;
         private System.Windows.Forms.TextBox tbxContact;
@@ -649,6 +986,35 @@
         private System.Windows.Forms.TextBox tbxProfessorNumber;
         private System.Windows.Forms.TextBox tbxProfessorName;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage tpgTestScore;
+        private System.Windows.Forms.Button btnTestRegScore;
+        private System.Windows.Forms.Button btnTestSearchStudent;
+        private System.Windows.Forms.Label lblTestCourse9Title;
+        private System.Windows.Forms.Label lblTestCourse6Title;
+        private System.Windows.Forms.Label lblTestCourse3Title;
+        private System.Windows.Forms.Label lblTestCourse8Title;
+        private System.Windows.Forms.Label lblTestCourse5Title;
+        private System.Windows.Forms.Label lblTestCourse2Title;
+        private System.Windows.Forms.Label lblTestCourse7Title;
+        private System.Windows.Forms.Label lblTestCourse4Title;
+        private System.Windows.Forms.Label lblTestCourse1Title;
+        private System.Windows.Forms.TextBox tbxTestScore9;
+        private System.Windows.Forms.TextBox tbxTestScore6;
+        private System.Windows.Forms.Label lblTestNumberTitle;
+        private System.Windows.Forms.TextBox tbxTestScore8;
+        private System.Windows.Forms.TextBox tbxTestScore5;
+        private System.Windows.Forms.TextBox tbxTestScore3;
+        private System.Windows.Forms.TextBox tbxTestScore7;
+        private System.Windows.Forms.TextBox tbxTestScore4;
+        private System.Windows.Forms.TextBox tbxTestScore2;
+        private System.Windows.Forms.TextBox tbxTestScore1;
+        private System.Windows.Forms.TextBox tbxTestNumber;
+        private System.Windows.Forms.Label lblTestAverage;
+        private System.Windows.Forms.Label lblTestAverageTitle;
+        private System.Windows.Forms.Label lblTestTotalCount;
+        private System.Windows.Forms.Label lblTestTotalCountTitle;
+        private System.Windows.Forms.Label lblTestName;
+        private System.Windows.Forms.Label lblTestNameTitle;
     }
 }
 

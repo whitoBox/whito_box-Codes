@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Week04KimYoHan
 {
-    //Object 클래스를 상속한
-    //Department 클래스를 
-    class Department : Object 
+    class Professor
     {
-        public String Code;
+        public String DepartmentCode;
+        public String Number;
         public String Name;
 
         public override string ToString()
         {
-            return $"[{this.Code}] {this.Name}";
+            return $"[{this.Number}] {this.Name}";
         }
+
     }
-    
-    
 }
