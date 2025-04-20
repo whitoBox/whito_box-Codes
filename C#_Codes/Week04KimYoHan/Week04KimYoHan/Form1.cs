@@ -44,13 +44,69 @@ namespace Week04KimYoHan
             };
 
             string[] a;
-            cmbYear.Items.AddRange(new object[] {1,2,3,4}); //items는 모든 값을 받기 때문에 그거의 대등하는 object자료형으로 배열 맏느는 것을 추천
-            a = new[] {"A","B","C"};
+            cmbYear.Items.AddRange(new object[] { 1, 2, 3, 4 }); //items는 모든 값을 받기 때문에 그거의 대등하는 object자료형으로 배열 맏느는 것을 추천
+            a = new[] { "A", "B", "C" };
             cmbClass.Items.AddRange(a);
             a = new[] { "재학", "졸업", "휴학", "퇴학" };
             cmbRegStatus.Items.AddRange(a);
+            departments[0] = new Department()
+            {
+                Code = "A001",
+                Name = "컴퓨터정보"
+            };
+            departments[1] = new Department()
+            {
+                Code = "A002",
+                Name = "컴퓨터시스템"
+            };
+            for (int i = 0; i < departments.Length; i++)
+            {
+                if (departments[i] != null)
+                {
+                    lbxDepartment.Items.Add(departments[i]);
+                }
+            }
+            professors.Add(new Professor()
+            {
+                DepartmentCode = departments[0].Code,
+                Number = "2020001",
+                Name = "김인하"
+            });
+            professors.Add(new Professor()
+            {
+                DepartmentCode = departments[0].Code,
+                Number = "2023003",
+                Name = "김정석"
+            });
+            professors.Add(new Professor()
+            {
+                DepartmentCode = departments[1].Code,
+                Number = "2023004",
+                Name = "이공전"
+            });
+            students.Add("20240001", new Student()
+            {
+                Number = "20240001",
+                Name = "김미영",
+                RegStatus = "재학",
+                Year = 1,
+                BirthInfo = new DateTime(2004, 01, 01),
+                DepartmentCode = "A001",
+                AdvisorNumber = "2020001",
+                Class = "B",
+                Adress = "인천 남구 용현동 100",
+                Contact = "032-870-0000"
+            });
+            foreach (var student in students)
+            {
+                if (student.Value != null)
+                {
+                    lbxDictionary.Items.Add(student.Value);
+                }
+            }
         }
-        Student selectedStudent = null;
+
+            Student selectedStudent = null;
         private void btnRegisterDepartment_Click(object sender, EventArgs e)
         {
             //(구현)학과코드가 비어있으면 메시지를 띄우고 포커스 이동한 후 종료한다.
@@ -558,8 +614,36 @@ namespace Week04KimYoHan
             {
                 lblTestName.Text = selectedStudent.Name;
             }
-            
-
+            var grade = SerchGradeByNumber(selectedStudent.Number);
+#if false
+            if(grade != null)
+            {
+                //programmer tip 아래 and문 프로그램 죽지 않도록 해야하는 중요한 부분
+                for (int i = 0; i< grade.scores.Count && i < tbxTestScores.Length; i++)
+                {
+                    tbxTestScores[i].Text = grade.scores[i].ToString("0.0");//소수점 0.0 까지 표현한다.
+                }
+            }
+#else
+            if (grade != null)
+            {
+                //programmer tip 아래 and문 프로그램 죽지 않도록 해야하는 중요한 부분
+                for (int i = 0; i < grade.Count() && i < tbxTestScores.Length; i++)
+                {
+                    tbxTestScores[i].Text = grade.Get(i).ToString("0.0");//소수점 0.0 까지 표현한다.
+                }
+            }
+        }
+        private Grade SerchGradeByNumber(string number)
+        {
+            foreach(Grade grade in testGrades)
+            {
+                if(grade.StudentNumber == number)
+                {
+                    return grade;
+                }
+            }
+            return null;
         }
 
         private Student SerchStudentByNumber(string Number)
@@ -576,7 +660,70 @@ namespace Week04KimYoHan
 
         private void btnTestRegScore_Click(object sender, EventArgs e)
         {
+            if(selectedStudent == null)
+            {
+                tbxTestNumber.Focus();
+                return;
+            }
+            for(int i = 0; i < tbxTestScores.Count()-1; i++)
+            {
+                if(true == string.IsNullOrEmpty(tbxTestScores[i].Text)
+                && false == string.IsNullOrEmpty(tbxTestScores[i+1].Text))
+                {
+                    return;
+                }
+            }
+            var grade = SerchGradeByNumber(selectedStudent.Number);
+            if(grade == null)
+            {
+                grade = new Grade()
+                {
+                    StudentNumber = selectedStudent.Number
+                };
+            }
+#if false
+            grade.scores.Clear();
 
+            double temp;
+            for(int i = 0; i< tbxTestScores.Length; i++)
+            {
+                if (string.IsNullOrEmpty(tbxTestScores[i].Text))
+                {
+                    break;
+                }
+                if(false == double.TryParse(tbxTestScores[i].Text, out temp))
+                {
+                    tbxTestScores[i].Focus();
+                    return;
+                }
+                grade.scores.Add(temp);
+            }
+#else
+            grade.Clear();
+
+            double temp;
+            for (int i = 0; i < tbxTestScores.Length; i++)
+            {
+                if (string.IsNullOrEmpty(tbxTestScores[i].Text))
+                {
+                    break;
+                }
+                if (false == double.TryParse(tbxTestScores[i].Text, out temp))
+                {
+                    tbxTestScores[i].Focus();
+                    return;
+                }
+                grade.Add(temp);
+            }
+#endif
+            testGrades.Add(grade);
+            //총 과목수
+            lblTestTotalCount.Text = grade.Count().ToString();
+
+            //평균 출력
+            double average = grade.Average();
+            lblTestAverage.Text = average.ToString();
         }
     }
 }
+#endif
