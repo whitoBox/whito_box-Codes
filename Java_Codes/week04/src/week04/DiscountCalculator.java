@@ -21,6 +21,7 @@ public class DiscountCalculator {
 		//System.out.println("할인 후 가격:"+newprice+"원");
 		System.out.printf("할인 가격:%.0f%%\n",dc);
 		System.out.printf("할인 후 가격:%.0f원",newprice);
+		sc.close();
 	}
 
 }

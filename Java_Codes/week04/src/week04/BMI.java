@@ -30,6 +30,6 @@ public class BMI {
 		}
 		
 		System.out.printf("bmi 지수는 %.2f이고 %s입니다",bmi,fat);
-		
+		sc.close();
 	}
 }
