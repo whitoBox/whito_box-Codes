@@ -35,7 +35,7 @@ def insert(root, value):
 
 
 if __name__ == "__main__":
-    numbers = [10, 15, 8, 3, 9]
+    numbers = [10, 15,9, 8, 3, 9,11,9,12,9]
     root = None
 
     for number in numbers:
