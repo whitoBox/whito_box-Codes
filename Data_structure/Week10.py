@@ -85,8 +85,7 @@ def delete(node, value):
         node.data = min_larger_node.data
         node.right = delete(node.right, min_larger_node.data)
     return node
-
-
+#왼쪽에서 가장 큰걸로 수정하는것 구현해보기
 if __name__ == "__main__":
     numbers = [10, 15, 8, 3, 9, 14]
     root = None
