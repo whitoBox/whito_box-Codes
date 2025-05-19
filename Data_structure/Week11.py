@@ -30,6 +30,6 @@ def bfs(g,i, visited):
 
 visited_dfs = [0 for _ in range(len(graph2))]
 visited_bfs = [0 for _ in range(len(graph2))]
-dfs(graph, 2, visited_dfs)
+dfs(graph, 0, visited_dfs)
 print()
 bfs(graph, 0, visited_dfs)
