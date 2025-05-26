@@ -28,7 +28,7 @@ def bfs(g,i, visited):
         for j in range(len(g)):
             if g[i][j] == 1 and not visited[j]:
                 queue.append(j)
-                visited[j] = 1`
+                visited[j] = 1
 
 visited_dfs = [0 for _ in range(len(graph))]
 visited_bfs = [0 for _ in range(len(graph))]
