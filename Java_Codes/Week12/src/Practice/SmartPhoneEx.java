@@ -30,5 +30,6 @@ public class SmartPhoneEx {
 			sp.musicOn(ep);
 			sp.musicOff(ep);
 		}
+		sc.close();
 	}
 }
